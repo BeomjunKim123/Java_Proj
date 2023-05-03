@@ -1,0 +1,22 @@
+package chapter02.ex03;
+
+public class RangeOfVariable {
+	public static void main(String[] args) {
+		// 변수의 사용 범위 : 블락에서 선언되면 그 블락 까지가 사용 범위
+		
+		int val1 = 3; // 전역 변수
+		
+		{	//if, for, while, do while  <== 블락내부에서 선언된 변수는 지역 변수 : 블락내에서만 사용가능
+			
+			int val2 = 5; //지역 변수
+			
+			System.out.println(val1);
+			System.out.println(val2); // 블락안에서 선언된 변수는 블락밖에서 실행이 안됨
+		}
+		
+		System.out.println(val1);
+		//System.out.println(val2);  //오류발생
+		
+	}
+
+}
