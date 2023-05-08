@@ -16,32 +16,74 @@ public class Ex02 {
 		int eng;
 		int math;
 		
+		System.out.println("국어점수를 입력하세요>>>");
+		kor = sc.nextInt();
+		System.out.println("영어점수를 입력하세요>>>");
+		eng = sc.nextInt();
+		System.out.println("수학점수를 입력하세요>>>");
+		math = sc.nextInt();
+		
+		int sum = kor + eng + math;
+		double avg = sum / 3.0;
+		System.out.printf("학점의 합은 %d 이고, 평균은 %5.2f 입니다.\n", sum, avg);
+		
 		// 정수 값을 인풋 받아서 홀수/짝수 인지 확인 하는 프로그램에 사용하는 변수
 		int a;
 		
+		System.out.println("위 프로그램 번호를 입력 하세요>>> ");
+		a = sc.nextInt();
+		
+		if (a % 2 == 0) {
+			System.out.println("짝수입니다");
+	 	} else {
+	 		System.out.println("홀수입니다");
+	 	}
+		
 		//두 변수의 값을 받아서 같은 이름인지 확인하는 프로그램
+		//String aName;
+		//String bName;
+		
 		String aName;
 		String bName;
 		
-		System.out.println("========================================");
-		System.out.println("1.학점의 합계/평균 | 2.홀수/짝수 | 3.같은 이름 식별");
-		System.out.println("=========================================");
+		System.out.println("이름1을 입력하세요");
+		aName = sc.nextLine();
+		System.out.println("이름2을 입력하세요");
+		bName = sc.nextLine();
+		
+		if (aName.equals(bName)) {
+            System.out.println("두 이름은 같습니다.");
+        } else {
+            System.out.println("두 이름은 다릅니다.");
+       
+		
+		//System.out.println("========================================");
+		//System.out.println("1.학점의 합계/평균 | 2.홀수/짝수 | 3.같은 이름 식별");
+		//System.out.println("=========================================");
+		
+		
 		
 		//사용자로 부터 프로그램 선택
+		//System.out.println("위 프로그램 번호를 입력 하세요>>> ");
 		select = sc.nextInt();
+		
+		
 		
 		//if 조건으로 프로그램 실행
 		if (1 == select) {
 			//스캐너로 부터 국어/영어/수학 인풋받아서 합계와 평균을 출력
 			System.out.println("1번 항목을 출력 했습니다.");
+			
 		} else if (2 == select ) {
 			//a변수에 정수 값을 인풋받아서 홀수/짝수 인지 출력
+			System.out.println("2번 항목을 출력 했습니다.");
 		} else if (3 == select) {
-			//aName, bName 두 변수의 문자열을 인풋 받아서
+			//aName, bName 두 변수의 문자열을 인풋 받아서 두 문자열이 같은 이름인지 식별
+			System.out.println("3번 항목을 출력 했습니다.");
 		}
 		
 		//스캐너 종료 : 사용 후 메모리에서 제거
 		sc.close();
-	}
-
+	  }
+   }
 }
