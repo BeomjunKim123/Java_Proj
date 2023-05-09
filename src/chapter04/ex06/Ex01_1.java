@@ -49,6 +49,21 @@ public class Ex01_1 {
 			
 		}else if (a==3) {
 			System.out.println("3. 10개의 정수를 입력받아 그 수들 중 짝수의 개수가 몇 개인지 출력하는 프로그램");
+			
+			System.out.println("정수 10개를 공백을 사용해서 입력하세요 >>>");
+			int c, count = 0 ; //c : 스캐너로 받아서 저장하는 변수, count : 짝수만 카운트 하는 변수
+			for (int i = 1; i <= 10; i++) {
+				c = sc.nextInt(); 
+				if (c == 0) {
+					continue;
+				}
+				if (c%2 == 0) {
+					count++;
+				}
+			}
+			System.out.printf("입력 받은 짝수는 %d 입니다. ", count);
+			System.out.println("\n\n");
+		
 		}else if (a==4) {
 			System.out.println("4. 입력받은 정수만큼 성적을 입력받아서 총점과 평균을 출력하는 프로그램");
 		}else if (a==5) {
