@@ -66,6 +66,25 @@ public class Ex01_1 {
 		
 		}else if (a==4) {
 			System.out.println("4. 입력받은 정수만큼 성적을 입력받아서 총점과 평균을 출력하는 프로그램");
+			System.out.println("성적을 몇개를 작성할지 정수로 넣어주세요.>>>");
+			int b, c, sum = 0, count = 0; //b : 스캐너롤 인풋받을 변수,c: 정수 변수
+			//b : 성적의 개수 : 3 (국어, 영어, 수학)
+			//c : 점수를 담을 변수 : for 문을 사용해서 Scanner 로 인풋 받는 변수
+			//sum : 인풋 받은 점수를 합하는 변수, 
+			//count : 과목의 개수
+			b = sc.nextInt();
+			for (int i = 1; i < b; i++) {
+				System.out.println("각 과목의 점수를 공백을 사용해서 입력한 개수만큼 넣어주세요>>>");
+				c = sc.nextInt();
+				
+				sum += c; //sum = sum + c
+				count++;
+			}
+			double avg = sum/count;
+			
+			System.out.printf("입력한 과목수는 : %d이고, 합계는 : %d 이고, 평균은 : %.2f");
+			System.out.println();
+		
 		}else if (a==5) {
 			System.out.println("5. 프로그램 종료");
 		}else {
