@@ -38,7 +38,7 @@ public class Ex01_1 {
 				if ( i % 7 == 0 || i % 8 == 0) { // i가 7 or 8 의 배수일대
 					arr1[a] = i;
 					
-					a++;	// 배열의 방 번호
+					a++;	// 배열의 방 번호 증가
 				}		
 				if (a == idx ) break;
 			}
@@ -49,7 +49,7 @@ public class Ex01_1 {
 			}
 			System.out.print("\n\n");
 			
-			// Enhanced For 문을 사용해서 출력
+			// Enhanced For 문을 사용해서 출력 : 모든방을 출력해줌
 			for (int k : arr1) {
 				System.out.print(k + " ");
 			}
@@ -57,6 +57,7 @@ public class Ex01_1 {
 			
 			//Arrays.toString() 으로 출력
 			System.out.println(Arrays.toString(arr1));
+			System.out.println("========================");
 
 			
 			
@@ -94,10 +95,48 @@ public class Ex01_1 {
 			
 			// 배열의 지정된 내용을 출력 : Arrays.toString ()
 			System.out.println(Arrays.toString(arr1));
+			System.out.println("========================");
 		
 			
 		}else if (n==3) {
 			System.out.println("3.인풋 값을 받아서 방의 크기를 지정하고 3의 배수만 저장하는데 그 중 6의 배수인 경우 빼고 저장 후 출력");
+			System.out.println("배열 방의 크기를 콘솔에서 정수값으로 넣어 주세요>>>");
+			idx = sc.nextInt();
+			arr1 = new int[idx];
+			
+			int i = 0; //배열의 방번호
+			int a; //배열 방에 들어가는 값
+			
+			// 배열 (arr1)에 값을 insert
+			for(a = 1; true; a++) { //true라고 넣어도 무한루프가 돌아감
+				if (a % 3 == 0) { //3의 배수일때
+					if (a % 6 != 0) { //6의 배수가 아닐때
+						arr1[i] = a;
+						i++;
+						
+					}
+				}
+				
+				if (i == idx) break;
+			}
+			
+			//For 문으로 출력
+			for (i = 0; i < arr1.length; i++) {
+				System.out.print(arr1[i] + " ");
+			}
+			System.out.println("\n \n"); //alt + 화살표 아래로 내려감
+			
+			// 배열의 지정된 내용을 출력 : Enhanced For
+			for ( int k : arr1 ) {
+				System.out.print(k + " ");
+			}
+			System.out.println("\n \n");
+			
+			// 배열의 지정된 내용을 출력 : Arrays.toString ()
+			System.out.println(Arrays.toString(arr1));
+			System.out.println("\n \n");
+			
+			
 			
 		}else if (n==4) {
 			System.out.println("4번 선택 - 프로그램 종료 합니다.");
