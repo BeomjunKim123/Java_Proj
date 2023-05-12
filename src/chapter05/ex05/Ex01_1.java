@@ -30,12 +30,12 @@ public class Ex01_1 {
 				}
 				
 			}else if(i==2) { // 7, 8의 배수
-				for(int j = 0, a = 1; j < arr1[i].length;  a++) {
+				for(int j = 0, a = 1; j < arr1[i].length; j++, a++) {
 					
 					if (a % 7 == 0 || a % 8 == 0) {
 						
 						arr1[i][j] = a;
-						j++; //*왜 밑에다가 적용하지?
+						//j++; //*왜 밑에다가 적용하지?
 					}
 				}
 			}else if(i==3) {
