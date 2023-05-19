@@ -6,7 +6,7 @@ public class Member_Test {
 		
 		Member m1 = new Member();
 		
-		m1.set
+		//m1.setmemberId("홍길동");
 	}
 
 }
