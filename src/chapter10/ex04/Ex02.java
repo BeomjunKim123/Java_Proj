@@ -26,17 +26,44 @@ public class Ex02 {
 		//현대 자동차의 배열에 저장된 최대스피드의 평균을 출력
 		//현대 자동차의 배열에 저장된 오일의 합을 출력
 		
+		//1.현대자동차 객체를 인풋으로 받아서 arr배열 변수에 저장
 		arr = new Car[] {c1, c2, c3, c4};
+		//2.현대자동차의 배열에 저장된 최대스피드의 평균을 출력
 		avgMaxSpeed(arr);
-		sumOil(arr);
+		//3.현대 자동차의 배열에 저장된 오일의 합을 출력
+		System.out.println("현대 자동차의 오일의 전체 합계는 : " + sumOil(arr));
+		//sumOil(arr);
 		
 		
 	}
 	void avgMaxSpeed (Car[] arr) {
+		//배열에 들어오는 값을 다운캐스팅후 maxspeed 필드의 값을 더함.
+		int sum = 0;
+		double avg = 0.0;
+		for (int i = 0; i < arr.length; i++) {
+			// 다운 캐스팅
+			if (arr[i] instanceof Hcar) { //Hcar 타입이 있는지 확인
+			sum += ((Hcar)arr[i]).maxSpeed; //sum = sum + maxSpeed
+				
+			}
+		}
+		avg = (double) (sum / arr.length);
 		
-	}
+		System.out.printf("평균 스피드 : %.2f 입니다.", avg);
+		System.out.println();
+		}
+		
+	
 	int sumOil (Car[] arr) {
 		int sum = 0;
+		
+		//배열에 들어오는 oilLiter 필드의 값을 더해서 리턴
+		for (int i = 0; i < arr.length; i++) {
+			//다운캐스팅
+			if (arr[i] instanceof Hcar) {
+			sum += ((Hcar) arr[i]).oilLiter;
+			}
+		}
 		
 		
 		return sum;
