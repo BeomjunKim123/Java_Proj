@@ -66,8 +66,10 @@ public class TwoGenericAguments {
 		System.out.println(kv4.getKey());
 		System.out.println("============================");
 	
+		//Void로 지정된 곳에는 null
 		kv4.setValue(null);
 		System.out.println(kv4.getValue());
+		
 	}
 
 }
